@@ -46,7 +46,9 @@ UIH (Unnumbered Information with Header check): 1111 1111, FCS is calculated onl
 UI (Unnumbered Information): 1100 1000, FCS is calculated over all the fields.
 
 **SABM/DISC:**
+
 MS <--SABM/DISC-- TE
+
 MS ---UA-->  TE
 
 Whenever the SABM command is sent, the command has which DLC should be opened. The particular DLC will be opened. 
