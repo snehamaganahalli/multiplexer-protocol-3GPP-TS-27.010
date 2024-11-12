@@ -31,19 +31,19 @@ Each channel between TE and MS is called a Data Link Connection (DLC)
 | 1B(byte) | 1B | 1B | 1/2 B | many B | 1B | 1B
 
 
-Flag: specific bit pattens at both the end of the frame to identify the start and end of the frame.
-Address: which DCL I (Data Link Connection/Control Identifier)
-length: It will be 2B if EA bit is sent in the 1st B.
-Info: Data on the frame.
-FCS: Frame check sequence.
-Flag: Same as above.
-Control field: As below:
-SABM (Set Asynchronus balanced mode): 1111 1100
-UA (Unnumbered Acknowledgement): 1100 1100
-DM (Disconnected Mode): 1111 1000
-DISC (Disconnect): 1100 1010
-UIH (Unnumbered Information with Header check): 1111 1111, FCS is calculated only over the address and control field
-UI (Unnumbered Information): 1100 1000, FCS is calculated over all the fields.
+Flag: specific bit pattens at both the end of the frame to identify the start and end of the frame.\
+Address: which DCL I (Data Link Connection/Control Identifier)\
+length: It will be 2B if EA bit is sent in the 1st B.\
+Info: Data on the frame.\
+FCS: Frame check sequence.\
+Flag: Same as above.\
+Control field: As below:\
+SABM (Set Asynchronus balanced mode): 1111 1100\
+UA (Unnumbered Acknowledgement): 1100 1100\
+DM (Disconnected Mode): 1111 1000\
+DISC (Disconnect): 1100 1010\
+UIH (Unnumbered Information with Header check): 1111 1111, FCS is calculated only over the address and control field\
+UI (Unnumbered Information): 1100 1000, FCS is calculated over all the fields.\
 
 **SABM/DISC:**
 
@@ -56,14 +56,14 @@ Send it on DLC0. Reply is given with UA.
 
 DISC command is sent to close the DLC opened by the SABM command
 
-**UI/UIH**:
+**UI/UIH**:\
 Data is transferred through UIH/UI.
 
-**DM:**
+**DM:**\
 Close all the DLCs. The setup is already in disconnected mode send OK.
 This is same as CLD.
 
-**CLD:**
+**CLD:**\
 Close all the DLC and close the MUX mode. To restart MUX mode send AT+CMUX=0
 
 ======================================
@@ -80,7 +80,7 @@ ioctl(uart_fd, CLOCK_ON)
 
 ======================================
 
-Break detection on UART:
+**Break detection on UART:**
 When we unplug the cable, the "/dev/tty" gets closed. Before that we receive a continuous sequence of 1s on the UART.
 
 ======================================
@@ -98,6 +98,3 @@ For PSC, Type is 0000 0010, length is 0, no value filed.
 
 **T2:**
 The T2 timer is the amount of time the multiplexer control channel waits before re-transmitting a command.
-
-
-        
