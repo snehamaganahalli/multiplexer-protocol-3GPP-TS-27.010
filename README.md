@@ -67,6 +67,7 @@ This is same as CLD.
 Close all the DLC and close the MUX mode. To restart MUX mode send AT+CMUX=0
 
 ======================================
+
 You can put MS to sleep/low power stated so that power is saved.
 
 Suppose you are using a UART as the serial port, then you can OFF the UART clock by calling IOCTL.
@@ -78,6 +79,7 @@ To make UART wakeup
 ioctl(uart_fd, CLOCK_ON)
 
 ======================================
+
 Break detection on UART:
 When we unplug the cable, the "/dev/tty" gets closed. Before that we receive a continuous sequence of 1s on the UART.
 
