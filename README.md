@@ -26,8 +26,9 @@ Each channel between TE and MS is called a Data Link Connection (DLC)
 
 **Frame Format**
 
-| Flag | Address | Control | length | Information | FCS | Flag |\
-1B(byte)   1B       1B        1/2 B      many B     1B    1B
+| Flag | Address | Control | length | Information | FCS | Flag |
+
+| 1B(byte) | 1B | 1B | 1/2 B | many B | 1B | 1B
 
 
 Flag: specific bit pattens at both the end of the frame to identify the start and end of the frame.
