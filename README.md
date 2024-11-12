@@ -26,7 +26,7 @@ Each channel between TE and MS is called a Data Link Connection (DLC)
 
 **Frame Format**
 
-| Flag | Address | Control | length | Information | FCS | Flag |
+| Flag | Address | Control | length | Information | FCS | Flag |\
 1B(byte)   1B       1B        1/2 B      many B     1B    1B
 
 
@@ -93,8 +93,6 @@ For PSC, Type is 0000 0010, length is 0, no value filed.
 
 **T2:**
 The T2 timer is the amount of time the multiplexer control channel waits before re-transmitting a command.
-
-===============================================================*************************================================================================
 
 
         
